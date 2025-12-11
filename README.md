@@ -7,230 +7,230 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)
 ![JWT](https://img.shields.io/badge/JWT-Security-red?style=for-the-badge&logo=jsonwebtokens)
 
-**نظام إدارة تأمين شامل ومتطور مبني بتقنيات حديثة**
+**A comprehensive and modern insurance management system built with cutting-edge technologies**
 
-[المميزات](#-المميزات) • [التقنيات المستخدمة](#️-التقنيات-المستخدمة) • [البداية السريعة](#-البداية-السريعة) • [API Documentation](#-api-endpoints) • [المساهمة](#-المساهمة)
+[Features](#-features) • [Technologies](#️-technologies-used) • [Quick Start](#-quick-start) • [API Documentation](#-api-endpoints) • [Contributing](#-contributing)
 
 </div>
 
 ---
 
-## 📋 نظرة عامة
+## 📋 Overview
 
-نظام إدارة تأمين متكامل يوفر حلول شاملة لإدارة شركات التأمين، يتضمن إدارة حاملي الوثائق، الوكلاء، المطالبات، المدفوعات، والتقارير التفصيلية. النظام مبني على معمارية RESTful API مع واجهة أمامية تفاعلية.
+A comprehensive insurance management system that provides complete solutions for managing insurance companies, including policyholder management, agents, claims, payments, and detailed reports. The system is built on RESTful API architecture with an interactive frontend interface.
 
-### 🎯 الهدف من النظام
+### 🎯 System Objectives
 
-- **إدارة شاملة**: التحكم الكامل في جميع عمليات التأمين من مكان واحد
-- **أمان عالي**: نظام مصادقة متقدم باستخدام JWT
-- **سهولة الاستخدام**: واجهة مستخدم بسيطة وسهلة الاستخدام
-- **تقارير مفصلة**: تقارير شاملة عن جميع العمليات
-- **قابلية التوسع**: معمارية مرنة تسمح بالتطوير والتوسع
-
----
-
-## ✨ المميزات
-
-### 👥 إدارة المستخدمين
-
-#### 🔐 نظام المصادقة والتفويض
-- **تسجيل دخول آمن** للوكلاء وحاملي الوثائق
-- **مصادقة JWT** لحماية جميع نقاط الوصول
-- **صلاحيات متعددة المستويات** (Admin, Agent, Policyholder)
-- **إدارة الجلسات** مع انتهاء صلاحية تلقائي
-
-#### 👨‍💼 إدارة الوكلاء
-- إضافة وتعديل وحذف حسابات الوكلاء
-- تعيين الصلاحيات والأدوار
-- متابعة أداء الوكلاء
-- عرض الوكلاء النشطين وغير النشطين
-
-#### 👤 إدارة حاملي الوثائق
-- تسجيل حاملي وثائق جدد
-- تحديث البيانات الشخصية
-- عرض تفاصيل كاملة لكل حامل وثيقة
-- البحث والفلترة المتقدمة
-
-### 📄 إدارة الوثائق
-
-#### 📑 الوثائق التأمينية
-- **إنشاء وثائق جديدة** بأنواع مختلفة (صحي، حياة، سيارات، منزل)
-- **تفعيل وإيقاف الوثائق**
-- **تجديد تلقائي** للوثائق
-- **حساب الأقساط** بناءً على نوع التغطية
-- **متابعة حالة الوثائق** (نشطة، منتهية، معلقة)
-
-#### 🛡️ التغطيات التأمينية
-- إدارة أنواع التغطيات المختلفة
-- تحديد حدود التغطية والأقساط
-- ربط التغطيات بالوثائق
-- عرض تفاصيل التغطية لكل وثيقة
-
-### 💰 إدارة المطالبات
-
-#### 📝 معالجة المطالبات
-- **تقديم مطالبات جديدة** من قبل حاملي الوثائق
-- **تتبع حالة المطالبة** (قيد المراجعة، موافق عليها، مرفوضة، قيد الدفع)
-- **مراجعة المطالبات** من قبل الوكلاء
-- **الموافقة أو رفض المطالبات** مع التبرير
-- **سجل تفصيلي** لجميع التغييرات على المطالبة
-
-#### 📊 متابعة المطالبات
-- Dashboard شامل لجميع المطالبات
-- فلترة حسب الحالة والتاريخ
-- إشعارات فورية بتحديثات المطالبات
-- تقارير تفصيلية عن المطالبات
-
-### 💳 إدارة المدفوعات
-
-#### 💵 معالجة الدفعات
-- **تسجيل المدفوعات** (بطاقة ائتمان، تحويل بنكي، نقدي)
-- **متابعة حالة الدفع** (معلق، مكتمل، فاشل، مسترد)
-- **سجل كامل للمدفوعات** لكل وثيقة
-- **تنبيهات الدفع** للأقساط المستحقة
-
-#### 📈 التقارير المالية
-- تقارير المدفوعات اليومية والشهرية
-- تحليل الإيرادات حسب نوع الوثيقة
-- تتبع المدفوعات المتأخرة
-- إحصائيات مالية شاملة
-
-### 📊 لوحة التحكم والتقارير
-
-#### 📱 Dashboard التفاعلي
-- **إحصائيات فورية** عن جميع العمليات
-- **رسوم بيانية** توضيحية
-- **أرقام سريعة** (عدد الوثائق، المطالبات، المدفوعات)
-- **تنبيهات ذكية** للأحداث الهامة
-
-#### 📑 التقارير المفصلة
-- تقارير الوثائق النشطة والمنتهية
-- تقارير المطالبات حسب الحالة
-- تقارير المدفوعات والإيرادات
-- تقارير أداء الوكلاء
-- تقارير حاملي الوثائق
-- إمكانية تصدير التقارير (PDF, Excel)
-
-### 🔔 نظام الإشعارات
-
-- **إشعارات فورية** للأحداث الهامة
-- **تنبيهات البريد الإلكتروني** (قابلة للتفعيل)
-- **إشعارات الدفع** للأقساط المستحقة
-- **تحديثات المطالبات** الفورية
+- **Comprehensive Management**: Complete control of all insurance operations from one place
+- **High Security**: Advanced authentication system using JWT
+- **User Friendly**: Simple and easy-to-use user interface
+- **Detailed Reports**: Comprehensive reports on all operations
+- **Scalability**: Flexible architecture that allows for development and expansion
 
 ---
 
-## 🛠️ التقنيات المستخدمة
+## ✨ Features
+
+### 👥 User Management
+
+#### 🔐 Authentication & Authorization System
+- **Secure Login** for agents and policyholders
+- **JWT Authentication** to protect all endpoints
+- **Multi-level Permissions** (Admin, Agent, Policyholder)
+- **Session Management** with automatic expiration
+
+#### 👨‍💼 Agent Management
+- Add, edit, and delete agent accounts
+- Assign permissions and roles
+- Track agent performance
+- View active and inactive agents
+
+#### 👤 Policyholder Management
+- Register new policyholders
+- Update personal information
+- View complete details for each policyholder
+- Advanced search and filtering
+
+### 📄 Policy Management
+
+#### 📑 Insurance Policies
+- **Create new policies** with different types (Health, Life, Auto, Home)
+- **Activate and deactivate policies**
+- **Automatic renewal** for policies
+- **Calculate premiums** based on coverage type
+- **Track policy status** (Active, Expired, Suspended)
+
+#### 🛡️ Insurance Coverages
+- Manage different types of coverages
+- Define coverage limits and premiums
+- Link coverages to policies
+- Display coverage details for each policy
+
+### 💰 Claims Management
+
+#### 📝 Claims Processing
+- **Submit new claims** by policyholders
+- **Track claim status** (Under Review, Approved, Rejected, In Payment)
+- **Review claims** by agents
+- **Approve or reject claims** with justification
+- **Detailed log** of all changes to the claim
+
+#### 📊 Claims Tracking
+- Comprehensive dashboard for all claims
+- Filter by status and date
+- Real-time notifications for claim updates
+- Detailed reports on claims
+
+### 💳 Payment Management
+
+#### 💵 Payment Processing
+- **Record payments** (Credit Card, Bank Transfer, Cash)
+- **Track payment status** (Pending, Completed, Failed, Refunded)
+- **Complete payment history** for each policy
+- **Payment alerts** for due premiums
+
+#### 📈 Financial Reports
+- Daily and monthly payment reports
+- Revenue analysis by policy type
+- Track overdue payments
+- Comprehensive financial statistics
+
+### 📊 Dashboard & Reports
+
+#### 📱 Interactive Dashboard
+- **Real-time statistics** on all operations
+- **Illustrative charts** and graphs
+- **Quick numbers** (Policy count, Claims, Payments)
+- **Smart alerts** for important events
+
+#### 📑 Detailed Reports
+- Reports on active and expired policies
+- Claims reports by status
+- Payment and revenue reports
+- Agent performance reports
+- Policyholder reports
+- Export reports capability (PDF, Excel)
+
+### 🔔 Notification System
+
+- **Real-time notifications** for important events
+- **Email alerts** (can be activated)
+- **Payment notifications** for due premiums
+- **Instant claim updates**
+
+---
+
+## 🛠️ Technologies Used
 
 ### Backend Technologies
 
-| التقنية | الإصدار | الوصف |
+| Technology | Version | Description |
 |---------|---------|-------|
-| **Java** | 17 | لغة البرمجة الأساسية |
-| **Spring Boot** | 3.2.3 | إطار العمل الرئيسي |
-| **Spring Security** | 3.2.3 | نظام الأمان والمصادقة |
-| **Spring Data JPA** | 3.2.3 | التعامل مع قاعدة البيانات |
+| **Java** | 17 | Core programming language |
+| **Spring Boot** | 3.2.3 | Main framework |
+| **Spring Security** | 3.2.3 | Security and authentication |
+| **Spring Data JPA** | 3.2.3 | Database interaction |
 | **Hibernate** | 6.x | ORM Framework |
-| **MySQL** | 8.0+ | قاعدة البيانات |
-| **JWT** | 0.11.5 | JSON Web Tokens للمصادقة |
-| **Maven** | 3.8+ | إدارة المشروع والاعتماديات |
-| **Lombok** | Latest | تبسيط الكود |
-| **Bean Validation** | 3.x | التحقق من البيانات |
-| **SpringDoc OpenAPI** | 2.x | توثيق API |
+| **MySQL** | 8.0+ | Database |
+| **JWT** | 0.11.5 | JSON Web Tokens for authentication |
+| **Maven** | 3.8+ | Project and dependency management |
+| **Lombok** | Latest | Code simplification |
+| **Bean Validation** | 3.x | Data validation |
+| **SpringDoc OpenAPI** | 2.x | API documentation |
 
 ### Frontend Technologies
 
-| التقنية | الوصف |
+| Technology | Description |
 |---------|-------|
-| **HTML5** | هيكلة الصفحات |
-| **CSS3** | تنسيق وتصميم الواجهة |
-| **JavaScript (ES6+)** | البرمجة التفاعلية |
-| **Bootstrap** | إطار عمل CSS |
-| **Font Awesome** | الأيقونات |
-| **Chart.js** | الرسوم البيانية |
+| **HTML5** | Page structure |
+| **CSS3** | Interface styling and design |
+| **JavaScript (ES6+)** | Interactive programming |
+| **Bootstrap** | CSS framework |
+| **Font Awesome** | Icons |
+| **Chart.js** | Charts and graphs |
 
 ### Development Tools
 
-- **Git** - نظام التحكم في الإصدارات
-- **Postman** - اختبار API
-- **IntelliJ IDEA** - بيئة التطوير
-- **MySQL Workbench** - إدارة قاعدة البيانات
+- **Git** - Version control system
+- **Postman** - API testing
+- **IntelliJ IDEA** - Development environment
+- **MySQL Workbench** - Database management
 
 ---
 
-## 🚀 البداية السريعة
+## 🚀 Quick Start
 
-### المتطلبات الأساسية
+### Prerequisites
 
-قبل البدء، تأكد من تثبيت:
+Before starting, make sure you have installed:
 
-- ☑️ **Java Development Kit (JDK) 17** أو أحدث
-- ☑️ **Maven 3.8+** لإدارة المشروع
-- ☑️ **MySQL 8.0+** قاعدة البيانات
-- ☑️ **Git** للحصول على الكود
+- ☑️ **Java Development Kit (JDK) 17** or newer
+- ☑️ **Maven 3.8+** for project management
+- ☑️ **MySQL 8.0+** database
+- ☑️ **Git** to get the code
 
-### خطوات التثبيت
+### Installation Steps
 
-#### 1️⃣ استنساخ المشروع
+#### 1️⃣ Clone the Project
 
 ```bash
 git clone https://github.com/khaledelmassry01/insurance.git
 cd insurance
 ```
 
-#### 2️⃣ إعداد قاعدة البيانات
+#### 2️⃣ Setup Database
 
-قم بإنشاء قاعدة بيانات MySQL جديدة:
+Create a new MySQL database:
 
 ```sql
 CREATE DATABASE insurance_company_database;
 ```
 
-أو استخدم السكريبت المرفق:
+Or use the included script:
 
 ```bash
 mysql -u root -p < database/schema.sql
 ```
 
-#### 3️⃣ تكوين ملف الإعدادات
+#### 3️⃣ Configure Settings File
 
-افتح ملف `src/main/resources/application.properties` وقم بتعديل إعدادات قاعدة البيانات:
+Open `src/main/resources/application.properties` and modify database settings:
 
 ```properties
-# إعدادات قاعدة البيانات
+# Database Configuration
 spring.datasource.url=jdbc:mysql://localhost:3306/insurance_company_database
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 
-# إعدادات JWT
+# JWT Configuration
 jwt.secret=your-secret-key-here-make-it-very-long-and-secure
 jwt.expiration=216000
 
-# منفذ الخادم
+# Server Port
 server.port=8080
 ```
 
-#### 4️⃣ بناء المشروع
+#### 4️⃣ Build the Project
 
 ```bash
 mvn clean install
 ```
 
-#### 5️⃣ تشغيل التطبيق
+#### 5️⃣ Run the Application
 
 ```bash
 mvn spring-boot:run
 ```
 
-أو بعد البناء:
+Or after building:
 
 ```bash
 java -jar target/insurance-0.0.1-SNAPSHOT.jar
 ```
 
-#### 6️⃣ الوصول إلى التطبيق
+#### 6️⃣ Access the Application
 
-- **الواجهة الأمامية**: [http://localhost:8080](http://localhost:8080)
+- **Frontend Interface**: [http://localhost:8080](http://localhost:8080)
 - **API Documentation**: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - **Actuator Health**: [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health)
 
@@ -288,11 +288,11 @@ Authorization: Bearer {jwt_token}
 Content-Type: application/json
 
 {
-  "firstName": "محمد",
-  "lastName": "أحمد",
-  "email": "mohamed@example.com",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
   "phoneNumber": "01234567890",
-  "address": "القاهرة، مصر",
+  "address": "Cairo, Egypt",
   "dateOfBirth": "1990-01-01",
   "nationalId": "29001010101010"
 }
@@ -387,7 +387,7 @@ Content-Type: application/json
   "policyId": 1,
   "claimAmount": 2000.00,
   "claimDate": "2024-01-15",
-  "description": "حادث سيارة",
+  "description": "Car accident",
   "incidentDate": "2024-01-14"
 }
 ```
@@ -401,7 +401,7 @@ Content-Type: application/json
 
 {
   "status": "APPROVED",
-  "remarks": "تمت الموافقة على المطالبة"
+  "remarks": "Claim approved successfully"
 }
 ```
 
@@ -475,8 +475,8 @@ Authorization: Bearer {jwt_token}
 Content-Type: application/json
 
 {
-  "coverageName": "تأمين صحي شامل",
-  "description": "يغطي جميع المصاريف الطبية",
+  "coverageName": "Comprehensive Health Insurance",
+  "description": "Covers all medical expenses",
   "coverageType": "HEALTH",
   "maxCoverageAmount": 500000.00,
   "premiumRate": 0.05
@@ -544,8 +544,8 @@ Authorization: Bearer {jwt_token}
 Content-Type: application/json
 
 {
-  "firstName": "أحمد",
-  "lastName": "محمود",
+  "firstName": "Ahmed",
+  "lastName": "Mahmoud",
   "email": "ahmed@insurance.com",
   "phoneNumber": "01012345678",
   "username": "agent01",
@@ -570,11 +570,11 @@ Authorization: Bearer {jwt_token}
 Content-Type: application/json
 
 {
-  "firstName": "محمد",
-  "lastName": "أحمد",
+  "firstName": "John",
+  "lastName": "Smith",
   "email": "newemail@example.com",
   "phoneNumber": "01098765432",
-  "address": "الإسكندرية، مصر"
+  "address": "Alexandria, Egypt"
 }
 ```
 
@@ -593,7 +593,7 @@ Content-Type: application/json
 
 ---
 
-## 📂 هيكل المشروع
+## 📂 Project Structure
 
 ```
 insurance/
@@ -601,7 +601,7 @@ insurance/
 ├── src/
 │   ├── main/
 │   │   ├── java/com/insurance/
-│   │   │   ├── config/               # إعدادات التطبيق
+│   │   │   ├── config/               # Application configuration
 │   │   │   │   ├── OpenApiConfig.java
 │   │   │   │   └── SecurityConfig.java
 │   │   │   │
@@ -620,13 +620,13 @@ insurance/
 │   │   │   │   ├── PolicyholderProfileController.java
 │   │   │   │   └── ReportController.java
 │   │   │   │
-│   │   │   ├── exception/            # معالجة الأخطاء
+│   │   │   ├── exception/            # Error handling
 │   │   │   │   ├── ErrorResponse.java
 │   │   │   │   ├── GlobalExceptionHandler.java
 │   │   │   │   ├── ResourceNotFoundException.java
 │   │   │   │   └── ValidationErrorResponse.java
 │   │   │   │
-│   │   │   ├── model/                # نماذج البيانات
+│   │   │   ├── model/                # Data models
 │   │   │   │   ├── Agent.java
 │   │   │   │   ├── Claim.java
 │   │   │   │   ├── ClaimStatus.java
@@ -648,7 +648,7 @@ insurance/
 │   │   │   │   ├── PolicyRepository.java
 │   │   │   │   └── PolicyholderRepository.java
 │   │   │   │
-│   │   │   ├── security/             # الأمان والمصادقة
+│   │   │   ├── security/             # Security & Authentication
 │   │   │   │   ├── AgentUserDetails.java
 │   │   │   │   ├── JwtAuthenticationFilter.java
 │   │   │   │   └── JwtTokenProvider.java
@@ -668,7 +668,7 @@ insurance/
 │   │   │   └── InsuranceApplication.java
 │   │   │
 │   │   └── resources/
-│   │       ├── static/               # الملفات الثابتة
+│   │       ├── static/               # Static files
 │   │       │   ├── css/
 │   │       │   │   └── style.css
 │   │       │   ├── js/
@@ -691,32 +691,32 @@ insurance/
 │   │       │
 │   │       └── application.properties
 │   │
-│   └── test/                         # الاختبارات
+│   └── test/                         # Tests
 │
-├── target/                           # ملفات البناء
-├── pom.xml                          # إعدادات Maven
-├── .gitignore                       # ملفات Git المستبعدة
-└── README.md                        # هذا الملف
+├── target/                           # Build files
+├── pom.xml                          # Maven configuration
+├── .gitignore                       # Excluded Git files
+└── README.md                        # This file
 ```
 
 ---
 
-## 🗄️ قاعدة البيانات
+## 🗄️ Database
 
-### نموذج البيانات (Entity Relationship)
+### Data Model (Entity Relationship)
 
-النظام يحتوي على الجداول الرئيسية التالية:
+The system contains the following main tables:
 
-#### 📊 الجداول الرئيسية
+#### 📊 Main Tables
 
-1. **agents** - بيانات الوكلاء
+1. **agents** - Agent data
    - agent_id (PK)
    - first_name, last_name
    - email, phone_number
    - username, password
    - hire_date, status
 
-2. **policyholders** - حاملي الوثائق
+2. **policyholders** - Policyholders
    - policyholder_id (PK)
    - first_name, last_name
    - email, phone_number
@@ -724,7 +724,7 @@ insurance/
    - national_id
    - username, password
 
-3. **insurance_coverage** - أنواع التغطية
+3. **insurance_coverage** - Coverage types
    - coverage_id (PK)
    - coverage_name
    - description
@@ -732,7 +732,7 @@ insurance/
    - max_coverage_amount
    - premium_rate
 
-4. **policy** - الوثائق التأمينية
+4. **policy** - Insurance policies
    - policy_id (PK)
    - policyholder_id (FK)
    - coverage_id (FK)
@@ -743,7 +743,7 @@ insurance/
    - coverage_amount
    - policy_type
 
-5. **claim** - المطالبات
+5. **claim** - Claims
    - claim_id (PK)
    - policy_id (FK)
    - claim_number
@@ -753,7 +753,7 @@ insurance/
    - description
    - status
 
-6. **payment_info** - المدفوعات
+6. **payment_info** - Payments
    - payment_id (PK)
    - policy_id (FK)
    - amount
@@ -762,11 +762,11 @@ insurance/
    - transaction_reference
    - status
 
-7. **policy_status** - حالات الوثائق
-8. **payment_status** - حالات المدفوعات
-9. **claim_status** - حالات المطالبات
+7. **policy_status** - Policy statuses
+8. **payment_status** - Payment statuses
+9. **claim_status** - Claim statuses
 
-### العلاقات بين الجداول
+### Table Relationships
 
 ```
 policyholders (1) ----→ (N) policy
@@ -778,84 +778,84 @@ policy (1) ----→ (N) payment_info
 
 ---
 
-## 🔒 الأمان
+## 🔒 Security
 
-### استراتيجية الأمان
+### Security Strategy
 
 1. **JWT Authentication**
-   - جميع endpoints محمية بـ JWT
-   - Token صالح لمدة 60 ساعة افتراضياً
-   - Refresh token للحفاظ على الجلسة
+   - All endpoints protected with JWT
+   - Token valid for 60 hours by default
+   - Refresh token to maintain session
 
 2. **Password Security**
-   - تشفير كلمات المرور باستخدام BCrypt
-   - سياسة كلمات مرور قوية
-   - إمكانية تغيير كلمة المرور
+   - Password encryption using BCrypt
+   - Strong password policy
+   - Ability to change password
 
 3. **Role-Based Access Control**
-   - ROLE_ADMIN - صلاحيات كاملة
-   - ROLE_AGENT - إدارة الوثائق والمطالبات
-   - ROLE_POLICYHOLDER - الوصول للبيانات الشخصية فقط
+   - ROLE_ADMIN - Full permissions
+   - ROLE_AGENT - Policy and claims management
+   - ROLE_POLICYHOLDER - Personal data access only
 
 4. **CORS Configuration**
-   - مكون بشكل آمن
-   - يسمح فقط بالطلبات من مصادر موثوقة
+   - Securely configured
+   - Allows only requests from trusted sources
 
 5. **Input Validation**
-   - التحقق من جميع المدخلات
-   - حماية من SQL Injection
-   - حماية من XSS Attacks
+   - Validation of all inputs
+   - Protection from SQL Injection
+   - Protection from XSS Attacks
 
 ---
 
-## 🧪 الاختبار
+## 🧪 Testing
 
-### تشغيل الاختبارات
+### Running Tests
 
 ```bash
-# تشغيل جميع الاختبارات
+# Run all tests
 mvn test
 
-# تشغيل اختبارات محددة
+# Run specific tests
 mvn test -Dtest=PolicyServiceTest
 
-# تشغيل الاختبارات مع التغطية
+# Run tests with coverage
 mvn clean test jacoco:report
 ```
 
-### اختبار API باستخدام Postman
+### Testing API with Postman
 
-1. قم باستيراد مجموعة Postman المرفقة
-2. قم بتعيين المتغيرات البيئية:
+1. Import the included Postman collection
+2. Set environment variables:
    - `base_url`: http://localhost:8080
-   - `jwt_token`: سيتم تعيينه تلقائياً بعد تسجيل الدخول
+   - `jwt_token`: Will be set automatically after login
 
 ---
 
-## 📱 الواجهة الأمامية
+## 📱 Frontend
 
-### الصفحات المتاحة
+### Available Pages
 
-#### للوكلاء (Agents)
+#### For Agents
 
-1. **index.html** - صفحة تسجيل الدخول الرئيسية
-2. **Dashboard** - لوحة التحكم الرئيسية
-3. **policyholders.html** - إدارة حاملي الوثائق
-4. **policies.html** - إدارة الوثائق
-5. **reports.html** - التقارير والإحصائيات
+1. **index.html** - Main login page
+2. **Dashboard** - Main control panel
+3. **policyholders.html** - Policyholder management
+4. **policies.html** - Policy management
+5. **reports.html** - Reports and statistics
 
-#### لحاملي الوثائق (Policyholders)
+#### For Policyholders
 
-1. **policyholder-login.html** - تسجيل الدخول
-2. **policyholder-dashboard.html** - لوحة التحكم الشخصية
-3. **policyholder-claims.html** - إدارة المطالبات
-4. **policyholder-payments.html** - إدارة المدفوعات
+1. **policyholder-login.html** - Login
+2. **policyholder-dashboard.html** - Personal dashboard
+3. **policyholder-claims.html** - Claims management
+4. **policyholder-payments.html** - Payment management
 
-### المميزات التفاعلية
+### Interactive Features
 
 - ✅ Single Page Application (SPA) behavior
 - ✅ Real-time notifications
-- ✅ Responsive design (متوافق مع الهواتف)
+- ✅ Responsive design (mobile compatible)
 - ✅ Form validation
 - ✅ Loading indicators
 - ✅ Error handling
@@ -863,9 +863,9 @@ mvn clean test jacoco:report
 
 ---
 
-## 🌍 المتغيرات البيئية
+## 🌍 Environment Variables
 
-يمكنك تخصيص التطبيق باستخدام المتغيرات البيئية:
+You can customize the application using environment variables:
 
 ```bash
 # Database Configuration
@@ -881,7 +881,7 @@ export JWT_EXPIRATION=216000
 export PORT=8080
 ```
 
-أو استخدم ملف `.env` (غير مضمن في Git):
+Or use a `.env` file (not included in Git):
 
 ```properties
 DB_URL=jdbc:mysql://localhost:3306/insurance_company_database
@@ -894,36 +894,36 @@ PORT=8080
 
 ---
 
-## 🐛 استكشاف الأخطاء
+## 🐛 Troubleshooting
 
-### مشاكل شائعة وحلولها
+### Common Issues and Solutions
 
-#### 1. خطأ الاتصال بقاعدة البيانات
+#### 1. Database Connection Error
 
 ```
 Error: Unable to connect to database
 ```
 
-**الحل:**
-- تأكد من تشغيل MySQL Server
-- تحقق من بيانات الاتصال في application.properties
-- تأكد من وجود قاعدة البيانات
+**Solution:**
+- Make sure MySQL Server is running
+- Check connection credentials in application.properties
+- Ensure the database exists
 
 ```bash
 mysql -u root -p
 CREATE DATABASE insurance_company_database;
 ```
 
-#### 2. خطأ JWT Token
+#### 2. JWT Token Error
 
 ```
 Error: Invalid JWT token
 ```
 
-**الحل:**
-- تأكد من تضمين Bearer Token في Header
-- تحقق من صلاحية التوكن (قد يكون منتهي)
-- قم بتسجيل الدخول مجدداً للحصول على token جديد
+**Solution:**
+- Make sure to include Bearer Token in Header
+- Check token validity (may be expired)
+- Login again to get a new token
 
 #### 3. Port Already in Use
 
@@ -931,9 +931,9 @@ Error: Invalid JWT token
 Error: Port 8080 is already in use
 ```
 
-**الحل:**
-- غير المنفذ في application.properties
-- أو أوقف البرنامج الذي يستخدم المنفذ 8080
+**Solution:**
+- Change the port in application.properties
+- Or stop the program using port 8080
 
 ```bash
 # Windows
@@ -951,7 +951,7 @@ kill -9 <PID>
 Error: Failed to execute goal
 ```
 
-**الحل:**
+**Solution:**
 ```bash
 mvn clean install -U
 mvn dependency:purge-local-repository
@@ -959,69 +959,69 @@ mvn dependency:purge-local-repository
 
 ---
 
-## 📈 الأداء والتحسينات
+## 📈 Performance & Optimizations
 
-### تحسينات الأداء المطبقة
+### Applied Performance Improvements
 
 1. **Database Connection Pooling**
-   - HikariCP لإدارة اتصالات قاعدة البيانات
+   - HikariCP for database connection management
    - Maximum pool size: 10
    - Minimum idle: 5
 
 2. **JPA Batch Processing**
-   - Batch insert/update للعمليات المتعددة
+   - Batch insert/update for multiple operations
    - Batch size: 50
 
 3. **Caching Strategy**
-   - يمكن تفعيل Spring Cache
-   - Cache للبيانات الثابتة
+   - Spring Cache can be enabled
+   - Cache for static data
 
 4. **Query Optimization**
-   - استخدام Projections لتقليل البيانات المنقولة
-   - Lazy Loading للعلاقات
-   - Index على الأعمدة المهمة
+   - Use Projections to reduce data transfer
+   - Lazy Loading for relationships
+   - Index on important columns
 
 ---
 
-## 🔄 التحديثات المستقبلية
+## 🔄 Future Updates
 
-### Features القادمة
+### Upcoming Features
 
-- [ ] نظام إشعارات البريد الإلكتروني
-- [ ] تكامل مع بوابات الدفع الإلكتروني
-- [ ] تطبيق موبايل (Android/iOS)
-- [ ] نظام الرسائل الداخلية
-- [ ] تصدير التقارير بصيغ مختلفة (PDF, Excel)
-- [ ] Dashboard متقدم بالذكاء الاصطناعي
-- [ ] نظام الموافقات متعدد المستويات
-- [ ] تكامل مع خدمات خارجية (SMS, Push Notifications)
-- [ ] نظام النسخ الاحتياطي التلقائي
+- [ ] Email notification system
+- [ ] Integration with electronic payment gateways
+- [ ] Mobile application (Android/iOS)
+- [ ] Internal messaging system
+- [ ] Export reports in different formats (PDF, Excel)
+- [ ] Advanced AI-powered dashboard
+- [ ] Multi-level approval system
+- [ ] Integration with external services (SMS, Push Notifications)
+- [ ] Automatic backup system
 - [ ] Multi-language Support
 
 ---
 
-## 🤝 المساهمة
+## 🤝 Contributing
 
-نرحب بمساهماتكم! يرجى اتباع الخطوات التالية:
+We welcome your contributions! Please follow these steps:
 
-1. **Fork** المشروع
-2. أنشئ **Branch** جديد (`git checkout -b feature/AmazingFeature`)
-3. **Commit** التغييرات (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** إلى Branch (`git push origin feature/AmazingFeature`)
-5. افتح **Pull Request**
+1. **Fork** the project
+2. Create a new **Branch** (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to Branch (`git push origin feature/AmazingFeature`)
+5. Open a **Pull Request**
 
-### إرشادات المساهمة
+### Contribution Guidelines
 
-- اتبع نمط الكود الموجود
-- أضف اختبارات للميزات الجديدة
-- حدّث التوثيق عند الحاجة
-- تأكد من عدم وجود أخطاء قبل الإرسال
+- Follow existing code style
+- Add tests for new features
+- Update documentation when needed
+- Make sure there are no errors before submitting
 
 ---
 
-## 📄 الترخيص
+## 📄 License
 
-هذا المشروع مرخص تحت [MIT License](LICENSE).
+This project is licensed under [MIT License](LICENSE).
 
 ```
 MIT License
@@ -1041,28 +1041,28 @@ copies or substantial portions of the Software.
 
 ---
 
-## 👥 الفريق
+## 👥 Team
 
-### المطور الرئيسي
+### Lead Developer
 
 - **Khaled Elmassry** - [GitHub Profile](https://github.com/khaledelmassry01)
 
-### المساهمون
+### Contributors
 
-نشكر جميع المساهمين في هذا المشروع! 🙏
+Thank you to all contributors to this project! 🙏
 
 ---
 
-## 📞 الدعم والاتصال
+## 📞 Support & Contact
 
-### هل تحتاج مساعدة؟
+### Need Help?
 
 - 📧 **Email**: support@insurance-system.com
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/khaledelmassry01/insurance/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/khaledelmassry01/insurance/discussions)
 - 📖 **Documentation**: [Wiki](https://github.com/khaledelmassry01/insurance/wiki)
 
-### وسائل التواصل الاجتماعي
+### Social Media
 
 - 🔗 [LinkedIn](#)
 - 🐦 [Twitter](#)
@@ -1070,13 +1070,13 @@ copies or substantial portions of the Software.
 
 ---
 
-## ⭐ ادعمنا
+## ⭐ Support Us
 
-إذا أعجبك هذا المشروع، لا تنسَ أن تضع ⭐ على GitHub!
+If you like this project, don't forget to give it a ⭐ on GitHub!
 
 ---
 
-## 📊 الإحصائيات
+## 📊 Stats
 
 ![GitHub stars](https://img.shields.io/github/stars/khaledelmassry01/insurance?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/khaledelmassry01/insurance?style=social)
@@ -1084,23 +1084,23 @@ copies or substantial portions of the Software.
 
 ---
 
-## 🙏 شكر خاص
+## 🙏 Special Thanks
 
-نتقدم بالشكر لـ:
+Special thanks to:
 
-- **Spring Boot Team** - للإطار الرائع
-- **MySQL Team** - لقاعدة البيانات الموثوقة
-- **جميع المساهمين** في المكتبات المستخدمة
-- **المجتمع المفتوح المصدر** للدعم المستمر
+- **Spring Boot Team** - For the amazing framework
+- **MySQL Team** - For the reliable database
+- **All contributors** to the libraries used
+- **Open Source Community** for continuous support
 
 ---
 
 <div align="center">
 
-### صنع بـ ❤️ في مصر
+### Made with ❤️ in Egypt
 
 **Insurance Management System** © 2024
 
-[⬆ العودة للأعلى](#-insurance-management-system)
+[⬆ Back to Top](#-insurance-management-system)
 
 </div>
