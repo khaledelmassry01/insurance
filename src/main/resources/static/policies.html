@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies - Insurance Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .container {
+            display: none;
+        }
+        body.authenticated .container {
+            display: block;
+        }
+        /* Sticky action bar styles */
+        .sticky-action-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navpar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Insurance Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policyholders.html">Policyholders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="policies.html">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">Reports</a>
+                    </li>
+                </ul>
+             
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4" id="main-content">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Error notification -->
+                <div id="error-notification" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                    <strong><i class="fas fa-exclamation-circle"></i> Error:</strong> <span id="error-message">Bulk editing of multiple policies is not yet implemented.</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                
+                <!-- Confirmation notification -->
+                <div id="confirm-notification" class="position-fixed top-0 start-50 translate-middle-x mt-2 alert alert-danger d-none confirm-notification" role="alert">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Confirm</strong>
+                            <div id="confirm-message">Are you sure you want to delete selected policies?</div>
+                        </div>
+                        <button type="button" class="btn-close" id="confirm-close-btn" aria-label="Close"></button>
+                    </div>
+                    <div class="mt-2">
+                        <button id="confirm-yes-btn" class="btn btn-sm btn-light">Yes, proceed</button>
+                        <button id="confirm-no-btn" class="btn btn-sm btn-secondary ms-2">Cancel</button>
+                    </div>
+                </div>
+                
+                <h2>Policies Dashboard</h2>
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Policies</h5>
+                                <h2 class="card-text" id="total-policies">0</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Active Policies</h5>
+                                <p class="card-text fs-4 fw-bold" id="active-policies-count">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white"> 
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Policies</h5>
+                                <p class="card-text fs-4 fw-bold" id="pending-policies-count">0</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Expired Policies</h5>
+                                <h2 class="card-text" id="expired-policies">0</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticky-action-bar">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="ms-5 pt-2">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPolicyModal">
+                                <i class="fas fa-plus"></i> Add New Policy
+                            </button>
+                            
+                            <!-- Action buttons for all policies -->
+                            <button id="bulk-edit-btn" class="btn btn-primary ms-2">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button id="bulk-delete-btn" class="btn btn-danger ms-2">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </div>
+                
+                        <input type="text" id="policy-search" placeholder="Search policies by ID..." class="form-control ms-3 policy-search-input">
+                    </div>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="select-all-policies" class="form-check-input">
+                                </th>
+                                <th>Policy ID</th>
+                                <th>Type</th>
+                                <th>Policyholder</th>
+                                <th>Status</th>
+                                <th>End Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="policies-table-body">
+                            <!--Data From Database -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Policy -->
+    <div class="modal fade" id="addPolicyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addPolicyForm" data-validate="true">
+                        <div class="mb-3">
+                            <label for="policy-type" class="form-label">Policy Type</label>
+                            <select class="form-select" id="policy-type" required data-validate="required">
+                                <option value="">Select Policy Type</option>
+                                
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="policy-holder-search" class="form-label">Policyholder</label>
+                            <input type="text" class="form-control" id="policy-holder-search" placeholder="Search Policyholder by ID or Name..." required data-validate="required integer">
+                            <input type="hidden" id="policy-holder-id" name="policyholder_id">
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label for="policy-endDate" class="form-label">End Date</label>
+                            <input type="date" class="form-control" id="policy-endDate" required data-validate="required futureDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="policy-premium" class="form-label">Premium Amount</label>
+                            <input type="number" class="form-control" id="policy-premium" required min="0" step="0.01" data-validate="required number min:0">
+                        </div>
+                        <div class="mb-3">
+                            <label for="policy-coverage" class="form-label">Coverage Amount</label>
+                            <input type="number" class="form-control" id="policy-coverage" required min="0" step="0.01" data-validate="required number min:0">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Policy</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Policy  -->
+    <div class="modal fade" id="editPolicyModal" tabindex="-1" aria-labelledby="editPolicyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="editPolicyForm" class="modal-content" data-validate="true">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPolicyModalLabel">Edit Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="edit-policy-status" class="form-label">Status</label>
+                        <select class="form-select" id="edit-policy-status" required data-validate="required">
+                            
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-policy-endDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="edit-policy-endDate" required data-validate="required">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-policy-premium" class="form-label">Premium Amount</label>
+                        <input type="number" class="form-control" id="edit-policy-premium" required min="0" step="0.01" data-validate="required number min:0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-policy-coverage" class="form-label">Coverage Amount</label>
+                        <input type="number" class="form-control" id="edit-policy-coverage" required min="0" step="0.01" data-validate="required number min:0">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Modify</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token');
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const agent = localStorage.getItem('agent');
+    
+            if (!token || isLoggedIn !== 'true' || !agent) {
+                localStorage.removeItem('token');
+                localStorage.removeItem('agent');
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'index.html';
+            } else {
+                document.body.classList.add('authenticated');
+                
+                // Set up search functionality
+                const searchInput = document.getElementById('policy-search');
+                if (searchInput) {
+                    searchInput.addEventListener('input', function() {
+                        const searchTerm = this.value.toLowerCase().trim();
+                        
+                        if (searchTerm.length > 0) {
+                            // If there's a search term, reload policies with the search filter
+                            loadPoliciesWithFilter(searchTerm);
+                        } else {
+                            // If search is cleared, load all policies
+                            loadPolicies();
+                        }
+                    });
+                }
+                
+                // Add this function to the global scope
+                window.loadPoliciesWithFilter = async function(searchTerm) {
+                    try {
+                        const list = await apiRequest('/api/policies');
+                        const filteredList = list.filter(policy => 
+                            policy.insuranceId.toString().includes(searchTerm));
+                        
+                        const tbody = document.getElementById('policies-table-body');
+                        if (!tbody) return;
+                        
+                        if (filteredList.length === 0) {
+                            tbody.innerHTML = `
+                                <tr>
+                                    <td colspan="6" class="text-center">
+                                        No policies found matching ID: "${searchTerm}"
+                                    </td>
+                                </tr>
+                            `;
+                            return;
+                        }
+                        
+                        // Use the same row template as in loadPolicies function
+                        tbody.innerHTML = filteredList.map(policy => `
+                            <tr data-policy-id="${policy.insuranceId}">
+                                <td>
+                                    <input type="checkbox" class="form-check-input policy-checkbox" data-policy-id="${policy.insuranceId}">
+                                </td>
+                                <td>${policy.insuranceId}</td>
+                                <td>${policy.policyType || 'N/A'}</td>
+                                <td>${policy.policyholderName || 'N/A'}</td>
+                                <td>
+                                    <span class="badge bg-${badgeClass(policy.status || 'Unknown')}">
+                                        ${policy.status || 'Unknown'}
+                                    </span>
+                                </td>
+                                <td>${formatDate(policy.expirationDate)}</td>
+                            </tr>
+                        `).join('');
+                        
+                        // Re-setup policy selection functionality
+                        setTimeout(() => setupPolicySelection(), 100);
+                    } catch (err) {
+                        console.error('Error filtering policies:', err);
+                    }
+                };
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* Custom styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.btn-action {
+    margin-right: 5px;
+}
+
+.dashboard-card {
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom modal styles */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Custom table styles */
+.table th {
+    background-color: #f8f9fa;
+}
+
+/* form */
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* button */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* alert */
+.alert {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* pagination*/
+.pagination {
+    margin-top: 20px;
+}
+
+/*search box*/
+.search-box {
+    margin-bottom: 20px;
+}
+
+/*card header */
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/*footer*/
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Hidden sections */
+.hidden {
+    display: none !important;
+}
+
+/* Navigation links visibility */
+#navLinks.nav-hidden {
+    display: none;
+}
+
+/* Section visibility - registerSection and welcomeSection are hidden by default */
+#registerSection,
+#welcomeSection {
+    display: none;
+}
+
+/* Error/Success alerts */
+#loginError,
+#registerError {
+    display: none;
+}
+
+#loginError.show,
+#registerError.show {
+    display: block;
+}
+
+/* Policies page specific styles */
+.confirm-notification {
+    z-index: 1050;
+    max-width: 500px;
+}
+
+.policy-search-input {
+    max-width: 250px;
+}
+
+/* Financial Analytics Table Styles */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-financial {
+    min-width: 1000px;
+    font-size: 0.9rem;
+}
+
+.table-financial th {
+    white-space: nowrap;
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    padding: 12px 8px;
+    text-align: center;
+}
+
+.table-financial td {
+    padding: 10px 8px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-financial tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Status badges */
+.badge-status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-paid {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-failed {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-na {
+    background-color: #6c757d;
+    color: white;
+} 

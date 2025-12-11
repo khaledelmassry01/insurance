@@ -1,0 +1,408 @@
+2025-05-04T08:53:24.094+03:00  INFO 15124 --- [main] com.insurance.InsuranceApplication       : Starting InsuranceApplication using Java 17.0.15 with PID 15124 (C:\insurance\target\classes started by micro in C:\insurance)
+2025-05-04T08:53:24.097+03:00 DEBUG 15124 --- [main] com.insurance.InsuranceApplication       : Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-04T08:53:24.099+03:00  INFO 15124 --- [main] com.insurance.InsuranceApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T08:53:25.958+03:00  INFO 15124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04T08:53:26.099+03:00  INFO 15124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 11 JPA repository interfaces.
+2025-05-04T08:53:27.467+03:00  INFO 15124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-04T08:53:27.474+03:00  INFO 15124 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-04T08:53:27.483+03:00  INFO 15124 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-04T08:53:27.500+03:00  INFO 15124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-04T08:53:27.502+03:00  INFO 15124 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-04T08:53:27.706+03:00  INFO 15124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-04T08:53:27.708+03:00  INFO 15124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3547 ms
+2025-05-04T08:53:28.240+03:00  INFO 15124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-04T08:53:29.011+03:00  INFO 15124 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70f98f7a
+2025-05-04T08:53:29.020+03:00  INFO 15124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-04T08:53:29.281+03:00  INFO 15124 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04T08:53:29.499+03:00  INFO 15124 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-04T08:53:29.615+03:00  INFO 15124 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-04T08:53:30.364+03:00  INFO 15124 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04T08:53:30.505+03:00  WARN 15124 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-04T08:53:32.166+03:00  INFO 15124 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T08:53:33.169+03:00  INFO 15124 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-04T08:53:34.258+03:00 DEBUG 15124 --- [main] c.i.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-04T08:53:34.263+03:00 DEBUG 15124 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-05-04T08:53:35.826+03:00  WARN 15124 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04T08:53:36.131+03:00  INFO 15124 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-05-04T08:53:36.410+03:00 DEBUG 15124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 54 mappings in 'requestMappingHandlerMapping'
+2025-05-04T08:53:36.725+03:00 DEBUG 15124 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-04T08:53:37.116+03:00  INFO 15124 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-04T08:53:37.281+03:00  INFO 15124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@be1f747, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@164ca703, org.springframework.security.web.context.SecurityContextHolderFilter@5ed48fd4, org.springframework.security.web.header.HeaderWriterFilter@79ec9d81, org.springframework.web.filter.CorsFilter@f5dd2de, org.springframework.security.web.authentication.logout.LogoutFilter@5f0369af, com.insurance.security.JwtAuthenticationFilter@664e8bb7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c36c9f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1145d71f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64f6964f, org.springframework.security.web.session.SessionManagementFilter@1613b471, org.springframework.security.web.access.ExceptionTranslationFilter@6b092322, org.springframework.security.web.access.intercept.AuthorizationFilter@653b49c4]
+2025-05-04T08:53:37.589+03:00 DEBUG 15124 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-04T08:53:37.716+03:00 DEBUG 15124 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-04T08:53:38.505+03:00  INFO 15124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-04T08:53:38.576+03:00  INFO 15124 --- [main] com.insurance.InsuranceApplication       : Started InsuranceApplication in 14.993 seconds (process running for 15.835)
+2025-05-04T08:53:38.875+03:00  INFO 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04T08:53:38.876+03:00  INFO 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-04T08:53:38.877+03:00 DEBUG 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-04T08:53:38.878+03:00 DEBUG 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-04T08:53:38.879+03:00 DEBUG 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-04T08:53:38.881+03:00 DEBUG 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@555856fa
+2025-05-04T08:53:38.883+03:00 DEBUG 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4d7143de
+2025-05-04T08:53:38.884+03:00 DEBUG 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-04T08:53:38.885+03:00  INFO 15124 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-05-04T08:53:47.455+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2025-05-04T08:53:47.470+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-05-04T08:53:47.471+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.servlet.view.InternalResourceView  : View name 'forward:', model {}
+2025-05-04T08:53:47.477+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.servlet.view.InternalResourceView  : Forwarding to [index.html]
+2025-05-04T08:53:47.492+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "FORWARD" dispatch for GET "/index.html", parameters={}
+2025-05-04T08:53:47.495+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:53:47.508+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "FORWARD" dispatch, status 200
+2025-05-04T08:53:47.512+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:53:47.518+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2025-05-04T08:53:47.520+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:53:47.522+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/js/api.js", parameters={}
+2025-05-04T08:53:47.524+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:53:47.527+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:53:47.529+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/js/auth.js", parameters={}
+2025-05-04T08:53:47.531+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:53:47.531+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:53:47.532+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/js/dashboard.js", parameters={}
+2025-05-04T08:53:47.534+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:53:47.537+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/js/main.js", parameters={}
+2025-05-04T08:53:47.538+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:53:47.539+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:53:47.541+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:53:47.546+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:53:47.591+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/verify", parameters={}
+2025-05-04T08:53:47.592+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.insurance.controller.AuthController#verifyToken(String)
+2025-05-04T08:53:47.596+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-05-04T08:53:47.598+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-05-04T08:53:47.614+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-04T08:53:47.616+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sun May 04 08:53:47 EEST 2025, status=403, error=Forbidden, path=/api/dashboard/stats}]
+2025-05-04T08:53:47.628+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-05-04T08:53:47.629+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Invalid token"]
+2025-05-04T08:53:47.631+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2025-05-04T08:53:47.636+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2025-05-04T08:54:02.584+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2025-05-04T08:54:02.585+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.insurance.controller.AuthController#login(Map)
+2025-05-04T08:54:02.594+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{email=david64@hernandez.org, password=Sx7Lqonn9Efl}]
+2025-05-04T08:54:02.724+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.agent_id,
+        a1_0.city,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.gender,
+        a1_0.last_name,
+        a1_0.licence_number,
+        a1_0.password,
+        a1_0.phone_number,
+        a1_0.role,
+        a1_0.state,
+        a1_0.street,
+        a1_0.zip_code 
+    from
+        agents a1_0 
+    where
+        a1_0.email=?
+2025-05-04T08:54:02.786+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.agent_id,
+        a1_0.city,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.gender,
+        a1_0.last_name,
+        a1_0.licence_number,
+        a1_0.password,
+        a1_0.phone_number,
+        a1_0.role,
+        a1_0.state,
+        a1_0.street,
+        a1_0.zip_code 
+    from
+        agents a1_0 
+    where
+        a1_0.email=?
+2025-05-04T08:54:02.803+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-04T08:54:02.805+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{agent={lastName=Sullivan, isAdmin=true, licenceNumber=LIC24156, role=ADMIN, agentId=3, firstName=Do (truncated)...]
+2025-05-04T08:54:02.808+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.355+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2025-05-04T08:54:04.357+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-05-04T08:54:04.358+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.w.servlet.view.InternalResourceView  : View name 'forward:', model {}
+2025-05-04T08:54:04.359+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.w.servlet.view.InternalResourceView  : Forwarding to [index.html]
+2025-05-04T08:54:04.362+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "FORWARD" dispatch for GET "/index.html", parameters={}
+2025-05-04T08:54:04.364+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:04.367+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "FORWARD" dispatch, status 200
+2025-05-04T08:54:04.368+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.384+03:00 DEBUG 15124 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2025-05-04T08:54:04.384+03:00 DEBUG 15124 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/js/api.js", parameters={}
+2025-05-04T08:54:04.385+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/js/dashboard.js", parameters={}
+2025-05-04T08:54:04.385+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/js/main.js", parameters={}
+2025-05-04T08:54:04.386+03:00 DEBUG 15124 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:04.386+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:04.385+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/js/auth.js", parameters={}
+2025-05-04T08:54:04.385+03:00 DEBUG 15124 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:04.387+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:04.388+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:04.393+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.393+03:00 DEBUG 15124 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.394+03:00 DEBUG 15124 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.396+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.396+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.413+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-05-04T08:54:04.416+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:04.426+03:00 DEBUG 15124 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.451+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        a1_0.agent_id,
+        a1_0.city,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.gender,
+        a1_0.last_name,
+        a1_0.licence_number,
+        a1_0.password,
+        a1_0.phone_number,
+        a1_0.role,
+        a1_0.state,
+        a1_0.street,
+        a1_0.zip_code 
+    from
+        agents a1_0 
+    where
+        a1_0.agent_id=?
+2025-05-04T08:54:04.451+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        a1_0.agent_id,
+        a1_0.city,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.gender,
+        a1_0.last_name,
+        a1_0.licence_number,
+        a1_0.password,
+        a1_0.phone_number,
+        a1_0.role,
+        a1_0.state,
+        a1_0.street,
+        a1_0.zip_code 
+    from
+        agents a1_0 
+    where
+        a1_0.agent_id=?
+2025-05-04T08:54:04.459+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/dashboard/stats", parameters={}
+2025-05-04T08:54:04.459+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/verify", parameters={}
+2025-05-04T08:54:04.460+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.insurance.controller.DashboardController#getDashboardStats(Principal)
+2025-05-04T08:54:04.460+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.insurance.controller.AuthController#verifyToken(String)
+2025-05-04T08:54:04.466+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/octet-stream', given [*/*] and supported [*/*]
+2025-05-04T08:54:04.467+03:00 DEBUG 15124 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:04.486+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        policyholders p1_0
+2025-05-04T08:54:04.493+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        count(ic1_0.insurance_id) 
+    from
+        insurance_coverage ic1_0
+2025-05-04T08:54:04.502+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        coalesce(sum(ic1_0.premium), 0) 
+    from
+        insurance_coverage ic1_0
+2025-05-04T08:54:04.507+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        claims c1_0
+2025-05-04T08:54:04.511+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-04T08:54:04.512+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{activePolicies=502, totalClaims=1349, totalPolicyholders=471, totalPayments=380658.00}]
+2025-05-04T08:54:04.518+03:00 DEBUG 15124 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:07.077+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/policies.html", parameters={}
+2025-05-04T08:54:07.079+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:07.083+03:00 DEBUG 15124 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:07.096+03:00 DEBUG 15124 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/js/auth.js", parameters={}
+2025-05-04T08:54:07.096+03:00 DEBUG 15124 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/js/main.js", parameters={}
+2025-05-04T08:54:07.096+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2025-05-04T08:54:07.096+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/js/api.js", parameters={}
+2025-05-04T08:54:07.098+03:00 DEBUG 15124 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:07.098+03:00 DEBUG 15124 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:07.099+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:07.099+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:07.104+03:00 DEBUG 15124 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:07.105+03:00 DEBUG 15124 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:07.105+03:00 DEBUG 15124 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:07.105+03:00 DEBUG 15124 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:07.123+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        a1_0.agent_id,
+        a1_0.city,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.gender,
+        a1_0.last_name,
+        a1_0.licence_number,
+        a1_0.password,
+        a1_0.phone_number,
+        a1_0.role,
+        a1_0.state,
+        a1_0.street,
+        a1_0.zip_code 
+    from
+        agents a1_0 
+    where
+        a1_0.agent_id=?
+2025-05-04T08:54:07.130+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/policies", parameters={}
+2025-05-04T08:54:07.132+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.insurance.controller.PolicyController#getMyPolicies(Authentication, Integer, String, String)
+2025-05-04T08:54:07.150+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        distinct ic1_0.insurance_id,
+        ic1_0.agent_id,
+        a1_0.agent_id,
+        a1_0.city,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.gender,
+        a1_0.last_name,
+        a1_0.licence_number,
+        a1_0.password,
+        a1_0.phone_number,
+        a1_0.role,
+        a1_0.state,
+        a1_0.street,
+        a1_0.zip_code,
+        ic1_0.coverage_amount,
+        ic1_0.expiration_date,
+        ic1_0.policy_id,
+        p1_0.policy_id,
+        p1_0.policy_type,
+        ic1_0.policyholder_id,
+        p2_0.policyholder_id,
+        p2_0.birthdate,
+        p2_0.city,
+        p2_0.dependant_id,
+        p2_0.dependant_relation,
+        p2_0.email,
+        p2_0.enrollment_date,
+        p2_0.first_name,
+        p2_0.gender,
+        p2_0.last_name,
+        p2_0.password,
+        p2_0.phone_number,
+        p2_0.ssn,
+        p2_0.state,
+        p2_0.street,
+        p2_0.zip_code,
+        ic1_0.premium,
+        ic1_0.status_id,
+        s1_0.status_id,
+        s1_0.status_name 
+    from
+        insurance_coverage ic1_0 
+    left join
+        policies p1_0 
+            on p1_0.policy_id=ic1_0.policy_id 
+    left join
+        policyholders p2_0 
+            on p2_0.policyholder_id=ic1_0.policyholder_id 
+    left join
+        policy_status s1_0 
+            on s1_0.status_id=ic1_0.status_id 
+    left join
+        agents a1_0 
+            on a1_0.agent_id=ic1_0.agent_id 
+    where
+        1=1
+2025-05-04T08:54:07.252+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        ic1_0.policy_id,
+        ic1_0.insurance_id,
+        ic1_0.agent_id,
+        ic1_0.coverage_amount,
+        ic1_0.expiration_date,
+        ic1_0.policyholder_id,
+        ic1_0.premium,
+        ic1_0.status_id 
+    from
+        insurance_coverage ic1_0 
+    where
+        ic1_0.policy_id=?
+2025-05-04T08:54:07.259+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        ic1_0.policy_id,
+        ic1_0.insurance_id,
+        ic1_0.agent_id,
+        ic1_0.coverage_amount,
+        ic1_0.expiration_date,
+        ic1_0.policyholder_id,
+        ic1_0.premium,
+        ic1_0.status_id 
+    from
+        insurance_coverage ic1_0 
+    where
+        ic1_0.policy_id=?
+2025-05-04T08:54:07.263+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        ic1_0.policy_id,
+        ic1_0.insurance_id,
+        ic1_0.agent_id,
+        ic1_0.coverage_amount,
+        ic1_0.expiration_date,
+        ic1_0.policyholder_id,
+        ic1_0.premium,
+        ic1_0.status_id 
+    from
+        insurance_coverage ic1_0 
+    where
+        ic1_0.policy_id=?
+2025-05-04T08:54:07.267+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        ic1_0.policy_id,
+        ic1_0.insurance_id,
+        ic1_0.agent_id,
+        ic1_0.coverage_amount,
+        ic1_0.expiration_date,
+        ic1_0.policyholder_id,
+        ic1_0.premium,
+        ic1_0.status_id 
+    from
+        insurance_coverage ic1_0 
+    where
+        ic1_0.policy_id=?
+2025-05-04T08:54:07.271+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        ic1_0.policy_id,
+        ic1_0.insurance_id,
+        ic1_0.agent_id,
+        ic1_0.coverage_amount,
+        ic1_0.expiration_date,
+        ic1_0.policyholder_id,
+        ic1_0.premium,
+        ic1_0.status_id 
+    from
+        insurance_coverage ic1_0 
+    where
+        ic1_0.policy_id=?
+2025-05-04T08:54:07.281+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-04T08:54:07.282+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.insurance.service.impl.PolicyServiceImpl$1@4cce1556, com.insurance.service.impl.PolicyServiceIm (truncated)...]
+2025-05-04T08:54:07.298+03:00 DEBUG 15124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-04T08:54:14.392+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        a1_0.agent_id,
+        a1_0.city,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.gender,
+        a1_0.last_name,
+        a1_0.licence_number,
+        a1_0.password,
+        a1_0.phone_number,
+        a1_0.role,
+        a1_0.state,
+        a1_0.street,
+        a1_0.zip_code 
+    from
+        agents a1_0 
+    where
+        a1_0.agent_id=?
+2025-05-04T08:54:14.397+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : DELETE "/api/insurance-coverage/1", parameters={}
+2025-05-04T08:54:14.398+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-04T08:54:14.401+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-04T08:54:14.404+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.insurance.exception.GlobalExceptionHandler#handleGlobalException(Exception)
+2025-05-04T08:54:14.407+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-04T08:54:14.408+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.insurance.exception.ErrorResponse@53b01187]
+2025-05-04T08:54:14.410+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/insurance-coverage/1.]
+2025-05-04T08:54:14.411+03:00 DEBUG 15124 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
